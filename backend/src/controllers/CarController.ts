@@ -16,17 +16,9 @@ const CarController = {
     },
 
     async create(req: Request, res: Response): Promise<Response> {
-        const {
-            brand,
-            model,
-            version,
-            year,
-            mileage,
-            gearbox,
-            price,
-        } = req.body
-        let car = await CarModel.create(req.body)
-        return res.json(car)
+        // let car = await CarModel.create(req.body)
+        console.log(req.body)
+        return res.json('ok')
     },
 
     async update(req: Request, res: Response): Promise<Response> {

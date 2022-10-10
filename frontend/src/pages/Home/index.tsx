@@ -43,15 +43,13 @@ const Home: React.FC = () => {
                 <div>ano</div>
                 <div>preço</div>
             </div>
-
+            <div className='tableContainer'>
             {dados.map((item, index) => {
-
                 return (
-                    <>
-                        <CarList item={item} key={item._id} />
-                    </>
+                <CarList item={item} key={item._id} />
                 )
             })}
+            </div>
         </div>
     )
 }

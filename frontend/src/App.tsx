@@ -16,10 +16,6 @@ function App() {
       </Routes>
       </BrowserRouter>
     </div>
-
-    // <Admin dataProvider={restProvider('http://localhost:3000')} >
-    //     <Resource name="cars" list={CarList} />
-    // </Admin>
   );
 }
 

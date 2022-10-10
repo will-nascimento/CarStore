@@ -1,31 +1,44 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Menu from '../../components/menu'
+import api from '../../services'
 
-const Register = ()=> {
+const Register = () => {
+
+    const [marca, setMarca] = useState('')
+    const [dados, setDados] = useState([])
+
+    const handleSubmit = async (e: any) => {
+        e.preventDefault();
+        await api.request({url:'car',data:{
+            brand: "String",
+            model: "String",
+            version: "String",
+            year: 2022,
+            mileage: 140000,
+            gearbox: "String",
+            price: 10000
+        }})
+            .then((response: any) => console.log(response))
+            .catch((error: any) => {
+                console.log(error)
+            });
+    }
+
     return (
         <div className='container'>
             <Menu />
             <h2>
                 Cadastro de carros
             </h2>
-            <div className='generalLabel'>
-                <div className='minorLabel'>
-                    <label htmlFor="marca">Marca</label>
-                    <input type="text" id='marca' placeholder="Ex.: Chevrolet"/>
+            <form className='formContainer' onSubmit={handleSubmit} >
+                <div className='generalLabel'>
+                    <div className='minorLabel'>
+                        <label htmlFor="marca" className='label' >Marca</label>
+                        {/* <input type="text" value={marca} onChange={e => setMarca(e.target.value)} placeholder="Ex.: Chevrolet"/> */}
+                    </div>
                 </div>
-                <div className='minorLabel'>
-                    <label htmlFor="modelo">Modelo</label>
-                    <input type="text" id='modelo' placeholder="Ex.: Onix"/>
-                </div>
-                <div className='minorLabel'>
-                    <label htmlFor="ano">Ano</label>
-                    <input type="text" id='ano' placeholder="Ex.: 2022"/>
-                </div>
-                <div className='minorLabel'>
-                    <label htmlFor="preco">Preço</label>
-                    <input type="text" id='preco' placeholder="Ex.: 22000"/>
-                </div>
-            </div>
+                <input type="submit" value="adicionar produto" className='button' />
+            </form>
         </div>
     )
 }

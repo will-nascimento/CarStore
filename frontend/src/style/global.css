@@ -1,26 +1,30 @@
-
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.container{
-    display: flex;
-    margin: 0 auto;
-    justify-content: center;
-    height: 100vh;
-    align-items: center;
-    flex-direction: column;
-}
-
-.tableHead{
-display: flex;
-}
-
-.tableHead div{
+.container {
   display: flex;
-  background-color: blueviolet;
+  margin: 0 auto;
+  margin-top: 20px;
+  justify-content: center;
+  /* height: 100vh; */
+  align-items: center;
+  flex-direction: column;
+}
+
+.container h2 {
+  margin: 10px;
+}
+
+.tableHead {
+  display: flex;
+}
+
+.tableHead div {
+  display: flex;
+  background-color: darkcyan;
   height: 50px;
   width: 200px;
   border: solid black;
@@ -31,24 +35,96 @@ display: flex;
   border-width: 0 1px 1px 0;
 }
 
-.tableBody{
-    display: flex;
-    }
+.tableContainer {
+  overflow: scroll;
+  overflow-y: initial;
+  height: 500px;
+}
 
-.tableBody div{
-    display: flex;
-    background-color: brown;
-  height: 50px;
+.tableContainer::-webkit-scrollbar {
+  width: 0px;
+}
+
+.tableBody {
+  display: flex;
+}
+
+.tableBody div {
+  display: flex;
+  background-color: lightgrey;
+  height: 35px;
   width: 200px;
   border: solid black;
   border-width: 0 1px 1px 0;
   justify-content: center;
   align-items: center;
-  color: white;
-  
+  color: black;
+
 }
 
-table, th, td {
-    border: 1px solid black;
-    border-collapse: collapse;
-  }
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+.generalLabel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.minorLabel {
+
+  margin: 10px;
+}
+
+label {
+  margin: 10px;
+  max-width: max-content;
+}
+
+input {
+  border: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-progress-appearance: none;
+  background: #f2f2f2;
+  padding: 2px;
+  border-radius: 3px;
+  width: 250px;
+  outline: none;
+}
+
+input:focus::placeholder {
+  color: transparent;
+}
+
+input::placeholder {
+  color: #222;
+  transition: color 0.3s ease;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.button {
+  background-color: aquamarine;
+  border: solid 1px black;
+  border-radius: 5px;
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  transition-duration: 0.4s;
+}
+
+.button:hover {
+  background-color: #4CAF50;
+  color: white;
+}

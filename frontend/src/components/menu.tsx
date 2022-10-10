@@ -6,13 +6,13 @@ function menu() {
         <div>
             <nav
                 style={{
-                    borderBottom: "solid 1px",
+                    borderBottom: "solid 1px red",
                     paddingBottom: "1rem",
                 }}
             >
-                <Link to="/">Início</Link> |{" "}
-                <Link to="/register">Cadastro</Link> |{" "}
-                <Link to="/sell">Vendas</Link>
+                <Link to="/" className='link' >Início</Link> |{" "}
+                <Link to="/register" className='link'>Cadastro</Link> |{" "}
+                <Link to="/sell" className='link' >Vendas</Link>
             </nav>
         </div>
     )
