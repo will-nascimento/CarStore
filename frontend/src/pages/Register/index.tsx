@@ -9,7 +9,7 @@ const Register = () => {
 
     const handleSubmit = async (e: any) => {
         e.preventDefault();
-        await api.request({url:'car',data:{
+        await api.post('car',{data:{
             brand: "String",
             model: "String",
             version: "String",
@@ -34,7 +34,7 @@ const Register = () => {
                 <div className='generalLabel'>
                     <div className='minorLabel'>
                         <label htmlFor="marca" className='label' >Marca</label>
-                        {/* <input type="text" value={marca} onChange={e => setMarca(e.target.value)} placeholder="Ex.: Chevrolet"/> */}
+                        <input type="text" value={marca} onChange={e => setMarca(e.target.value)} placeholder="Ex.: Chevrolet"/>
                     </div>
                 </div>
                 <input type="submit" value="adicionar produto" className='button' />
