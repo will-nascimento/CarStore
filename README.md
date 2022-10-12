@@ -51,7 +51,9 @@ obs.: caso a linha de comando esteja em BackEnd e não CarStore, é simples de r
 
 2.7. Digite o comando abaixo para instalação do NPM e suas dependências e pressione enter:
 
-      npm i 
+      npm install react-scripts --save
+      
+obs.: Normalmente o comando "npm i" resolve, porem para prevenir erro de "react-scripts" é interessante executar o comando acima mencionado. 
 
 2.8. Quando acabar de instalar, digite o seguinte comando e pressione enter:
 
@@ -59,8 +61,10 @@ obs.: caso a linha de comando esteja em BackEnd e não CarStore, é simples de r
 
 Obs1.: pode ser que demore um pouco para finalizar. Em seguida o seu navegador padrão deverá abrir sozinho no endereço http://localhost:3000/
 
-obs2.: caso seu navegador padrão não seja o Google Chrome, recomendamos que o faça para não haver erro de imcompatibilidade de Cors Policy. Caso utilize o Chrome e mesmo assim continuar dando erro, favor instalar o seguinte Plug-In para Chrome: https://chrome.google.com/webstore/detail/moesif-origin-cors-change/digfbfaphojjndkpccljibejjbppifbc?hl=pt-BR depois de instalado, favor deixar ele na posição Ligado. Assim evitaremos qualquer erro de Cors que possa vir a ocorrer. 
+obs2.: caso seu navegador padrão não seja o Google Chrome, recomendamos que o faça para não haver erro de imcompatibilidade de Cors Policy. Caso utilize o Chrome e mesmo assim continuar dando erro, favor instalar o seguinte Plug-In para Chrome: 
 
+https://chrome.google.com/webstore/detail/moesif-origin-cors-change/digfbfaphojjndkpccljibejjbppifbc?hl=pt-BR 
 
+depois de instalado, favor deixar ele na posição Ligado. Assim evitaremos qualquer erro de Cors que possa vir a ocorrer. 
       
 2.9 Sem mais problemas, a aplicação deverá rodar normalmente. caso haja algum problema favor entrar em contato através do email willnascimentowns@gmail.com 
