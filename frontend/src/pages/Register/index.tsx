@@ -1,44 +1,56 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Menu from '../../components/menu'
-import api from '../../services'
+import { create } from '../../services/products.service'
+import { toast } from 'react-toastify';
 
 const Register = () => {
+    const [name, setName] = useState('');
+    const [price, setPrice] = useState('');
+    const [quantity, setQuantity] = useState('');
 
-    const [marca, setMarca] = useState('')
-    const [dados, setDados] = useState([])
 
     const handleSubmit = async (e: any) => {
         e.preventDefault();
-        await api.post('car',{data:{
-            brand: "String",
-            model: "String",
-            version: "String",
-            year: 2022,
-            mileage: 140000,
-            gearbox: "String",
-            price: 10000
-        }})
-            .then((response: any) => console.log(response))
-            .catch((error: any) => {
-                console.log(error)
+        try {
+            const response =  await create({
+                name,
+                price:Number(price),
+                quantity:Number(quantity),
             });
+            if(!response.data.success){
+                toast.error('error on create product');
+                return;
+            }
+            toast.success('success on create product');
+        } catch (error) {
+            toast.error('error on create product');
+        }
     }
 
     return (
         <div className='container'>
             <Menu />
             <h2>
-                Cadastro de carros
+                Cadastro de produtos
             </h2>
             <form className='formContainer' onSubmit={handleSubmit} >
                 <div className='generalLabel'>
                     <div className='minorLabel'>
-                        <label htmlFor="marca" className='label' >Marca</label>
-                        <input type="text" value={marca} onChange={e => setMarca(e.target.value)} placeholder="Ex.: Chevrolet"/>
+                        <label htmlFor="name" className='label'>Name</label>
+                        <input type="text" value={name} onChange={e => setName(e.target.value)} placeholder="Ex.: Camisa polo vermelha"/>
+                    </div>
+                    <div className='minorLabel'>
+                        <label htmlFor="price" className='label'>Preço</label>
+                        <input type="number" value={price} onChange={e => setPrice(e.target.value)}/>
+                    </div>
+                    <div className='minorLabel'>
+                        <label htmlFor="quantity" className='label'>Quantidade</label>
+                        <input type="number" value={quantity} onChange={e => setQuantity(e.target.value)}/>
                     </div>
                 </div>
-                <input type="submit" value="adicionar produto" className='button' />
+
             </form>
+            <button className='button-new' onClick={handleSubmit}>Adicionar produto</button>
         </div>
     )
 }

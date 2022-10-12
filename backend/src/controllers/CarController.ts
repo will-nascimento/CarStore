@@ -16,7 +16,6 @@ const CarController = {
     },
 
     async create(req: Request, res: Response): Promise<Response> {
-        // let car = await CarModel.create(req.body)
         console.log(req.body)
         return res.json('ok')
     },
