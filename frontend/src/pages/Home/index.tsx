@@ -30,7 +30,7 @@ const Home: React.FC = () => {
                 return;
             }
             toast.success('Success');
-            // window.location.reload();
+            window.location.reload();
         } catch (error) {
             console.log('2',error);
             toast.error('error on erase product');
