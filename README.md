@@ -22,15 +22,38 @@ Obs.: Usualmente se utilizam dois repositórios diferentes para a aplicação, u
 
 2.1. Clique na aba Terminal, depois Novo Terminal, ou simplesmente aperte CTRL+SHIFT+'.
 
-2.2. Procure o arquivo FrontEnd, utilizando o comando abaixo e pressionando enter: 
+2.2. Procure o arquivo BackEnd, utilizando o comando abaixo e pressionando enter:
 
-      cd frontend
-
+     cd backend
+       
 2.3. Digite o comando abaixo para instalação do NPM e suas dependências e pressione enter:
 
       npm i 
-
+      
 2.4. Quando acabar de instalar, digite o seguinte comando e pressione enter:
+
+      npm run dev 
+      
+obs.: Deverá aparecer a seguinte mensagem no terminal MongoDB connection succeeded
+
+2.5. Voltando ao VsCode, abra outro terminal seguindo as instruções do item 2.1.
+
+
+2.6. Procure o arquivo FrontEnd, utilizando o comando abaixo e pressionando enter: 
+
+      cd frontend
+      
+      
+obs.: caso a linha de comando esteja em BackEnd e não CarStore, é simples de resolver, basta digitar o comando abaixo para sair da pasta BackEnd e voltar para a pasta CarStore: 
+      
+     
+     cd .. 
+
+2.7. Digite o comando abaixo para instalação do NPM e suas dependências e pressione enter:
+
+      npm i 
+
+2.8. Quando acabar de instalar, digite o seguinte comando e pressione enter:
 
       npm run start
 
@@ -38,24 +61,6 @@ Obs1.: pode ser que demore um pouco para finalizar. Em seguida o seu navegador p
 
 obs2.: caso seu navegador padrão não seja o Google Chrome, recomendamos que o faça para não haver erro de imcompatibilidade de Cors Policy. Caso utilize o Chrome e mesmo assim continuar dando erro, favor instalar o seguinte Plug-In para Chrome: https://chrome.google.com/webstore/detail/moesif-origin-cors-change/digfbfaphojjndkpccljibejjbppifbc?hl=pt-BR depois de instalado, favor deixar ele na posição Ligado. Assim evitaremos qualquer erro de Cors que possa vir a ocorrer. 
 
-2.5. Voltando ao VsCode, abra outro terminal seguindo as instruções do item 2.1.
 
-2.6. Procure o arquivo BackEnd, utilizando o comando abaixo e pressionando enter:
-
-     cd backend
-     
-obs.: caso a linha de comando esteja em FrontEnd e não CarStore, é simples de resolver, basta digitar o comando abaixo para sair da pasta FrontEnd e voltar para a pasta CarStore: 
-     
-     cd .. 
-       
-2.7. Digite o comando abaixo para instalação do NPM e suas dependências e pressione enter:
-
-      npm i 
-      
-2.8. Quando acabar de instalar, digite o seguinte comando e pressione enter:
-
-      npm run dev 
-      
-obs.: Deverá aparecer a seguinte mensagem no terminal MongoDB connection succeeded
       
 2.9 Sem mais problemas, a aplicação deverá rodar normalmente. caso haja algum problema favor entrar em contato através do email willnascimentowns@gmail.com 
