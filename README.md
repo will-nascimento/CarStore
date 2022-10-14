@@ -60,11 +60,5 @@ obs.: Normalmente o comando "npm i" resolve, porem para prevenir erro de "react-
       npm run start
 
 Obs1.: pode ser que demore um pouco para finalizar. Em seguida o seu navegador padrão deverá abrir sozinho no endereço http://localhost:3000/
-
-obs2.: caso seu navegador padrão não seja o Google Chrome, recomendamos que o faça para não haver erro de imcompatibilidade de Cors Policy. Caso utilize o Chrome e mesmo assim continuar dando erro, favor instalar o seguinte Plug-In para Chrome: 
-
-https://chrome.google.com/webstore/detail/moesif-origin-cors-change/digfbfaphojjndkpccljibejjbppifbc?hl=pt-BR 
-
-depois de instalado, favor deixar ele na posição Ligado. Assim evitaremos qualquer erro de Cors que possa vir a ocorrer. 
       
 2.9 Sem mais problemas, a aplicação deverá rodar normalmente. caso haja algum problema favor entrar em contato através do email willnascimentowns@gmail.com 
