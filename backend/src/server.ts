@@ -7,16 +7,18 @@ const port = process.env.PORT || 3333
 
 const app = express()
 
+app.use(cors({
+    origin: '*'
+}));
+
 app.use(urlencoded({
     extended:true
 }))
+
 app.use(express.json())
+
 app.use(router)
 
-
-app.use(cors());
-
-// mongoose.connect('mongodb://localhost:27017/will')
 mongoose.connect('mongodb+srv://willnascimento:senha@cluster0.3qkeiqw.mongodb.net/?retryWrites=true&w=majority')
 
 .then((data)=>{
